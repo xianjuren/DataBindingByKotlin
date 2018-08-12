@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="large"
+            type="boolean"/>
+
+        <variable
+            name="firstName"
+            type="String"/>
+
+        <variable
+            name="lastName"
+            type="String"/>
+
+        <variable
+            name="bCount"
+            type="int"/>
+
+        <variable
+            name="oCount"
+            type="int"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/normal_text_view"
+            android:padding="@{large ? @dimen/largePadding:@dimen/smallPadding}"
+            android:text="距离你的距离"/>
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text="@{@string/nameFormat(firstName,lastName)}"/>
+
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text="@{@plurals/b(bCount)}"/>
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text="@{@plurals/o(oCount,oCount)}"/>
+
+    </LinearLayout>
+
+</layout>

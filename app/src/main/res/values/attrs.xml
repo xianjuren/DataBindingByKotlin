@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="attribute_image_view">
+        <attr name="imageUrl" format="string"/>
+        <attr name="error" format="reference"/>
+    </declare-styleable>
+
+    <attr name="url" format="string|reference"/>
+    <attr name="placeHolder" format="reference"/>
+
+    <declare-styleable name="attribute_linear_layout">
+        <attr name="age" format="string"/>
+        <attr name="firstName" format="string"/>
+        <attr name="lastName" format="string"/>
+
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.databinding.ObservableArrayList"/>
+
+        <import type="android.databinding.ObservableArrayMap"/>
+
+        <variable
+            name="user"
+            type="com.databindingtest.observable.ObservableFileUser"/>
+
+        <variable
+            name="obserUser"
+            type="com.databindingtest.observable.ObservableUser"/>
+
+        <variable
+            name="mapUser"
+            type="ObservableArrayMap&lt;String,Object>"/>
+
+        <variable
+            name="listUser"
+            type="ObservableArrayList&lt;Object>"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/normal_text_view"
+            android:hint="extend"
+            android:text="@{@string/nameFormat(obserUser.firstName,obserUser.lastName)}"/>
+
+        <TextView
+            style="@style/normal_text_view"
+            android:hint="file"
+            android:text="@{@string/nameFormatWithAge(user.firstName,user.lastName,user.age)}"/>
+
+        <TextView
+            style="@style/normal_text_view"
+            android:hint="list"
+            android:text="@{@string/nameFormatWithAge(listUser[0],listUser[1],listUser[2])}"/>
+
+        <TextView
+            style="@style/normal_text_view"
+            android:hint="map"
+            android:text="@{@string/nameFormatWithAge(mapUser[`firstName`],mapUser[`lastName`],mapUser[`age`])}"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="初始化"
+                android:onClick="initValue"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1"
+                android:hint="重新赋值"
+                android:onClick="resetValue"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

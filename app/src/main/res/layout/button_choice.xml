@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.databindingtest.listener.OnChoiceClick"/>
+
+
+        <variable
+            name="okText"
+            type="String"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="点击选择"
+            android:onClick="@{listener.choiceClick}"
+            android:text="@{okText}"/>
+    </LinearLayout>
+
+</layout>

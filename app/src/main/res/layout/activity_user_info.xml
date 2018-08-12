@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.databindingtest.include.NormalUser"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/normal_text_view"
+            android:hint="第一姓名"
+            android:text="@{user.firstName}"
+            />
+
+        <TextView
+            style="@style/normal_text_view"
+            android:hint="第二姓名"
+            android:text="@{user.lastName}"
+            />
+
+        <include
+            android:id="@+id/input_layout"
+            layout="@layout/input_layout"/>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="java.util.List"/>
+
+        <import type="java.util.Map"/>
+
+        <import type="android.util.SparseArray"/>
+
+        <variable
+            name="index"
+            type="int"/>
+
+        <variable
+            name="key"
+            type="String"/>
+
+        <variable
+            name="list"
+            type="List&lt;String>"/>
+
+        <variable
+            name="map"
+            type="Map&lt;String,String>"/>
+
+        <variable
+            name="sparse"
+            type="SparseArray&lt;String>"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text="@{list[index]}"/>
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text="@{map[key]}"/>
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text="@{sparse[index]}"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/black"/>
+
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text="@{map[`firstName`]}"/>
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text='@{map["lastName"]}'/>
+
+
+        <TextView
+            style="@style/normal_text_view"
+            android:text="@{map[&quot;lastName&quot;]}"/>
+
+    </LinearLayout>
+
+</layout>

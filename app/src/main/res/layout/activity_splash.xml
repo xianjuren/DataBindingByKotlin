@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="byKotlin"
+                android:text="kotlin"/>
+
+            <Button
+                android:id="@+id/btn_basic"
+                style="@style/onclick_activity"
+                android:text="基本"/>
+
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="customBinding"
+                android:text="自定义Databinding"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_include"
+                style="@style/onclick_activity"
+                android:text="includes使用"
+                android:textAllCaps="false"/>
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="collection"
+                android:text="集合使用"/>
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="resource"
+                android:text="字符串等资源"/>
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="observable"
+                android:text="Observable使用"
+                android:textAllCaps="false"/>
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="viewId"
+                android:text="通过id找到View赋值"
+                android:textAllCaps="false"/>
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="viewStub"
+                android:text="viewStub使用"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="recycler"
+                android:text="recyclerView使用"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="attribute"
+                android:text="属性设置"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                style="@style/onclick_activity"
+                android:onClick="convert"
+                android:text="类型转换"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
